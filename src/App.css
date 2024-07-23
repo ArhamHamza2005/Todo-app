@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #585555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputfield {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: ;
+}
+
+.inputfield:focus {
+  border-color: #000000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .inputField {
+    font-size: 14px;
+    padding: 8px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 480px) {
+  .inputField {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px 20px;
+  }
+}
+/* ---------------------------deletall--------------------------------------- */
+
+.alldeletbtn  {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 10px;
+  color: white;
+  background-color:purple;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 49%;
+  margin-top: 1%;
+}
+
+.alldeletbtn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .alldeletbtn {
+      width: 100%;
+      font-size: 15px;
+      padding: 10px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alldeletbtn {
+      width: 100%;
+      font-size: 15px;
+      padding: 10px 5px;
+  }
+}
+/* ---------------------------------------------------updatebtn--------------------------------------------- */
+.updatebtn {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 10px;
+  color: white;
+  background-color:darkblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 49%;
+  margin-left: 1%;
+}
+
+
+.updatebtn:hover {
+  background-color: #0056b3;
+}
+
+.updatebtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .updatebtn {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .updatebtn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+/* -----------------------------------------------------------addbtn-------------------------------------------------- */
+.addbtn {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 10px;
+  color: white;
+  background-color: teal;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 1%;
+}
+
+.addbtn:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 576px) {
+  .addbtn {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  .addbtn {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 1%;
+  }
+}
+/* --------------------------------------------------------todolist-------------------------------------------------- */
+.todolist {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  color: white;
+  margin-top: 1%;
+}
+.delete-button, .edit-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #ff0000;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit-button {
+  background-color: orange;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Design */
+@media (max-width: 600px) {
+  .todolist {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 5px;
+    margin-top: 1%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .item-text {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
